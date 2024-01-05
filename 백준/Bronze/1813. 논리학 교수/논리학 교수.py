@@ -1,12 +1,9 @@
-n = int(input())
-counts = list(map(int, input().split()))
+N = int(input())
+ints = list(map(int, input().split()))
 
-max_true = -1
-
-for i in range(n+1):
-    true_count = counts.count(i)
-
-    if true_count == i:
-        max_true = max(max_true, i)
-
-print(max_true)
+true = -1
+for i in range(N + 1):
+    counter = ints.count(i)
+    if counter == i:
+        true = max(true, i)
+print(true)
