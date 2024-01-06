@@ -7,6 +7,5 @@ def solution(sizes):
         ver.append(size[1])
     max_hor, max_ver = max(hor), max(ver)
     
-    
     answer = max_hor * max_ver
     return answer
