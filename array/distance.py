@@ -7,8 +7,8 @@ def solution(dirs):
         nx, ny = update_location(x, y, dir)
         if not is_valid_move(nx, ny):
             continue
-        ans.add((x, y, nx, ny))
-        ans.add((nx, ny, x, y)) # A에서 B로 간 경우 B에서 A도 추가해야 함(총 경로의 개수는 방향성이 없음) 
+        ans.add((x, y, nx, ny)) # 점 A에서 B로 이동했음을 의미
+        ans.add((nx, ny, x, y)) # B에서 A로 간 경우도 추가해야 함(총 경로의 개수는 방향성이 없음) 
         x, y = nx, ny
     return int(len(ans) / 2)
 
