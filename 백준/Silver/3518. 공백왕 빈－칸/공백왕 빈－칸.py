@@ -1,5 +1,4 @@
 li, m = [], []
-i = 0
 
 while True:
     try:
@@ -10,7 +9,7 @@ while True:
                 m[i] = max(m[i], len(l))
             else:
                 m.append(len(l))
-    except:
+    except EOFError:
         break
 
 for i, l in enumerate(li):
