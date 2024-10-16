@@ -12,7 +12,7 @@ for _ in range(M):
 def bfs(start, K):
     q = deque()
     q.append(start)
-    visited = [False] * (N + 1)
+    visited = {i: False for i in range(N + 1)}
     visited[start] = True
     cnt = 0
     answer = []
